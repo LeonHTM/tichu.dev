@@ -4,24 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tichu App</title>
+  <meta name="description" content="Tichu App Description">
   <link rel="stylesheet" href="/static/styles.css?v=1.0">
-  <link rel="icon" href="{{ url_for('static', filename='TichuIconV1-iOS-Default-128x128@1x.png') }}">
-  <link rel="apple-touch-icon" href="{{ url_for('static', filename='TichuIconV1-iOS-Default-128x128@1x.png') }}">
+  <link rel="icon" href="{{ url_for('static', filename='tichu/TichuIconV1-iOS-Default-128x128@1x.png') }}">
 </head>
 <body>
 
   <nav>
-      <div class="nav-brand">
-        <a href="/" class="nav-logo-link">
-          <img src="{{ url_for('static', filename='TichuIconV1-iOS-Default-128x128@1x.png') }}" alt="Tichu" class="nav-logo" />
-        </a>
-        <a href="/" class="nav-title">
-          Tichu App
-        </a>
-      </div>
+    <div class="nav-brand">
+      <a href="/" class="nav-logo-link">
+        <img src="{{ url_for('static', filename='tichu/TichuIconV1-iOS-Default-128x128@1x.png') }}" alt="Tichu" class="nav-logo" />
+      </a>
+      <a href="/" class="nav-title">Tichu App</a>
+    </div>
+    <div class="nav-links">
+      <a href="https://drakynem.com" class="nav-link active">Drakynem</a>
+    </div>
   </nav>
 
+  <section class="landing-hero">
+    <div class="landing-hero-grid">
 
+      <div class="landing-hero-copy">
+        <img src="{{ url_for('static', filename='tichu/TichuIconV1-iOS-Default-1024x1024@1x.png') }}" alt="Tichu App Logo" class="landing-logo" />
+        <p class="landing-icon-subtitle">Tichu-App</p>
+        <h1 class="landing-title">The ultimate Tichu companion app.</h1>
+        <p class="landing-subtitle">If you want to jksalf jsklfj <span class="highlight">Brakka </span> löksadjf ölksadjf lösakjf löksadj flsöakj asldökjf löksadj frack bal balallkj saldkfj saldköjf and jsdkaflö sajdfklö jisdfu <span class="highlight">Brakka </span>asölkdfu lisadfj lkjsdf lköhehehhe sadfkj löasdf..</p>
+
+        <div class="store-buttons">
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="Download on App Store" >
+            <img src="{{ url_for('static', filename='download/downloadappstore.svg') }}" alt="Download on the App Store" />
+          </a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="Get it on Google Play" class="store-btn-disabled" >
+            <img src="{{ url_for('static', filename='download/downloadgoogleplay.svg') }}" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="features-section">
+    <h2 class="features-title">Overview</h2>
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="{{ url_for('static', filename='symbols/play128.png') }}" alt="play" class="feature-icon" />
+        </div>
+        <h3 class="feature-name">Track</h3>
+        <p class="feature-desc">Track your Tichu game rounds effortlessly. Keep count of wins, losses, and game progress with a simple, intuitive interface.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="{{ url_for('static', filename='symbols/clock128.png') }}" alt="clock" class="feature-icon" />
+        </div>
+        <h3 class="feature-name">History</h3>
+        <p class="feature-desc">Observe your full history of Tichu Games in full detail. Analyze your preformance over time with the Elo-Graph.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+           <img src="{{ url_for('static', filename='symbols/bars128.png') }}" alt="chart bars" class="feature-icon" />
+        </div>
+        <h3 class="feature-name">Statistics</h3>
+        <p class="feature-desc">View detailed game analytics and insights and compare yourself to your friends.</p>
+        
+      </div>
+
+    </div>
+  </section>
 
   <footer>
     Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. All rights reserved.
