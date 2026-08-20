@@ -236,9 +236,7 @@ main {
   main { padding: 32px 16px; }
 }
 
-/* =========================
-   NAV LINKS (multi-page nav)
-========================= */
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 24px;
@@ -262,9 +260,7 @@ main {
   opacity: 1;
 }
 
-/* =========================
-   LANDING HERO
-========================= */
+/*LANDING HERO*/
 .landing-hero-grid {
   max-width: 1100px;
   margin: 0 auto;
@@ -298,6 +294,43 @@ main {
   line-height: 1.1;
   margin-bottom: 16px;
   max-width: 800px;
+}
+
+
+.landing-hero-grid-2 {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-title-2 {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: -0.374px;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 8px;
+  max-width: 800px;
+}
+
+.landing-subtitle-2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.374px;
+  color: var(--ink);
+  margin: 0 auto 8px;
+  max-width: 850px;
+}
+
+.landing-title-2 .highlight {
+  color: var(--primary);
+  font-weight: 800;
 }
 
 .landing-subtitle {
@@ -350,9 +383,7 @@ main {
 }
 
 
-/* =========================
-   STATS BAND
-========================= */
+/*Stats*/
 .stats-band {
   background: var(--canvas);
   border-top: 1px solid var(--hairline);
@@ -375,12 +406,13 @@ main {
   font-weight: 700;
 }
 
-/* =========================
-   FEATURES
-========================= */
+/*TILES*/
 .features-section {
   max-width: 1100px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  position: relative;
   padding: 72px 24px;
 }
 
@@ -394,23 +426,48 @@ main {
   margin-bottom: 40px;
 }
 
-.feature-grid {
+.section-tiles .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
 }
 
-.feature-card {
+.tile {
+  grid-column: span 12; 
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--canvas);
   border: 1px solid var(--hairline);
-  background: var(--canvas);
-  border-radius: 18px;
-  padding: 48px 48px 40px;
   box-shadow: var(--shadow-elevated);
+  padding: 35px 40px;
   display: flex;
   flex-direction: column;
 }
 
-.feature-icon {
+.tile-image {
+display: flex;
+justify-content: center;
+margin-block-start: 40px;
+}
+
+.tile-half {
+  grid-column: span 6; 
+}
+
+.tile-third {
+  grid-column: span 4; 
+}
+
+.tile-rounded {
+  border-radius: 18px;
+}
+
+.tile-icon {
   width: 48px;
   height: 48px;
   display: flex;
@@ -419,32 +476,98 @@ main {
   margin-bottom: 16px;
 }
 
-.feature-name {
+.tile-name {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 21px;
+  line-height: 1.1904761905;
   font-weight: 600;
-  letter-spacing: -0.374px;
+  letter-spacing: .011em;
   color: var(--ink);
   margin-bottom: 10px;
 }
 
-.feature-desc {
-  font-size: 14px;
-  line-height: 1.5;
+.tile-desc {
+  font-size: 19px;
+  line-height: 1.2105263158;
+  font-weight: 600;
+  letter-spacing: .012em;
   color: var(--ink-muted);
   margin-bottom: 18px;
 }
 
 
-/* =========================
-   LANDING RESPONSIVE
-========================= */
+.tile-centered-8 {
+  grid-column: 3 / 11;
+}
+
+
+.tile-centered-6 {
+  grid-column: 4 / 10;
+}
+
+
+.tile-centered-10 {
+  grid-column: 2 / 12;
+}
+
 @media (max-width: 768px) {
-  .feature-grid { grid-template-columns: 1fr; }
+  .tile,
+  .tile-half,
+  .tile-third {
+    grid-column: span 12;
+  }
+}
+
+
+@media (max-width: 768px) {
   .landing-hero-grid { text-align: center; justify-content: center; }
   .landing-logo { margin-left: auto; margin-right: auto; }
   .store-buttons {
     justify-content: center;
     user-select: none;
   }
+}
+
+/*PHONES STUFF*/
+.phone-row-wrapper {
+  overflow: hidden;
+  width: 100%;
+  min-height: 650px;
+  padding-bottom: 40px;
+}
+
+
+.phone-row {
+  display: flex;
+  flex-wrap: nowrap;       
+  justify-content: flex-start; 
+  align-items: flex-start;
+  margin-block-start: 10px;
+  margin-left: -45px; 
+}
+
+.phone-frame {
+  position: relative;
+  flex: 0 0 458px;    
+  width: 458px;
+  aspect-ratio: 500 / 500; 
+}
+
+.phone-frame:not(:first-child) {
+  margin-left: -120px;
+}
+
+.phone-frame .content-img {
+  position: absolute;
+  top: 3.4%;      /* 17px / 500px */
+  left: 3.4%;     /* 17px / 500px */
+  width: 53.4%;   /* 267px / 500px */
+  border-radius: 15px;
+}
+
+.phone-frame .frame-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
