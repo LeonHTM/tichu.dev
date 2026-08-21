@@ -106,6 +106,28 @@ footer {
   text-decoration: underline;
 }
 
+.github-logo{
+  width:25px;
+}
+
+
+
+.landing-link {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.374px;
+  color: var(--ink);
+  margin: 0 auto 8px;
+  max-width: 850px;
+  text-decoration: none;
+}
+
+.landing-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 /* DASHBOARD MAIN */
 main {
   flex: 1;
