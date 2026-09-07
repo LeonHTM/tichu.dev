@@ -6,6 +6,10 @@ def create_app():
     @app.route("/", methods=["GET"])
     def browser_dashboard():
             return render_template("main.html")
+
+    @app.route("/privacy", methods=["GET"])
+    def privacy():
+            return render_template("privacy.html")
     
     @app.errorhandler(404)
     def page_not_found(e):
