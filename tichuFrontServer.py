@@ -27,7 +27,7 @@ def create_app():
 
     return app
 
-drakynemServer = create_app()
+tichuFrontServer = create_app()
 
 if __name__ == "__main__":
-    drakynemServer.run(host="0.0.0.0", port=5012, debug=True)
+    tichuFrontServer.run(host="0.0.0.0", port=5003, debug=True)
