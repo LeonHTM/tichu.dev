@@ -16,4 +16,4 @@ def create_app():
 drakynemServer = create_app()
 
 if __name__ == "__main__":
-    drakynemServer.run(host="127.0.0.1", port=5012, debug=True)
+    drakynemServer.run(host="0.0.0.0", port=5012, debug=True)

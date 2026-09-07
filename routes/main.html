@@ -29,13 +29,13 @@
         <img src="{{ url_for('static', filename='tichu/TichuIconV1-iOS-Default-1024x1024@1x.png') }}" alt="Tichu App Logo" class="landing-logo" />
         <p class="landing-icon-subtitle">TichuStats</p>
         <h1 class="landing-title">The ultimate Tichu companion app.</h1>
-        <p class="landing-subtitle">If you want to jksalf jsklfj <span class="highlight">Brakka </span> löksadjf ölksadjf lösakjf löksadj flsöakj asldökjf löksadj frack bal balallkj saldkfj saldköjf and jsdkaflö sajdfklö jisdfu <span class="highlight">Brakka </span>asölkdfu lisadfj lkjsdf lköhehehhe sadfkj löasdf..</p>
+        <p class="landing-subtitle">TichuStats allows you to effortlessly track scores and analyze your Tichu gameplay. Gain insights into your performance with statistics across five different timeframes, completely free and ad-free.</p>
 
         <div class="store-buttons">
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="Download on App Store" >
             <img src="{{ url_for('static', filename='download/downloadappstore.svg') }}" alt="Download on the App Store" />
           </a>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="Get it on Google Play" class="store-btn-disabled" >
+          <a href="" aria-label="Get it on Google Play" class="store-buttons-disabled">
             <img src="{{ url_for('static', filename='download/downloadgoogleplay.svg') }}" alt="Get it on Google Play" />
           </a>
         </div>
@@ -46,77 +46,341 @@
 
   <div class="phone-row-wrapper">
     <div class="phone-row">
-      <div class="phone-frame">
-        <img src="{{ url_for('static', filename='content/content-1.png') }}" class="content-img">
+      <div class="phone-frame build-in-iphone">
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.play.add.jpeg') }}" class="content-img">
         <img src="{{ url_for('static', filename='frames/iPhone.png') }}" class="frame-img">
       </div>
-      <div class="phone-frame">
-        <img src="{{ url_for('static', filename='content/content-2.png') }}" class="content-img">
+      <div class="phone-frame build-in-iphone-down">
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.stats.general.jpeg') }}" class="content-img">
         <img src="{{ url_for('static', filename='frames/iPhone.png') }}" class="frame-img">
       </div>
-      <div class="phone-frame">
-        <img src="{{ url_for('static', filename='content/content.png') }}" class="content-img">
+      <div class="phone-frame build-in-iphone">
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.play.general.jpeg') }}" class="content-img">
         <img src="{{ url_for('static', filename='frames/iPhone.png') }}" class="frame-img">
       </div>
-      <div class="phone-frame">
-        <img src="{{ url_for('static', filename='content/content-4.png') }}" class="content-img">
+      <div class="phone-frame build-in-iphone-down">
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.history.general.jpeg') }}" class="content-img">
         <img src="{{ url_for('static', filename='frames/iPhone.png') }}" class="frame-img">
       </div>
-      <div class="phone-frame">
-        <img src="{{ url_for('static', filename='content/content-5.png') }}" class="content-img">
+      <div class="phone-frame build-in-iphone">
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.widgets.homescreen.jpeg') }}" class="content-img">
         <img src="{{ url_for('static', filename='frames/iPhone.png') }}" class="frame-img">
       </div>
     </div>
   </div>
- <section class="landing-hero">
-    <div class="landing-hero-grid-2">
-      <div class="landing-hero-copy">
-        <h1 class="landing-title-2"><span class="highlight">Free</span> and without Ads.</h1>
-      </div>
-
-    </div>
-  </section>
-  <section class="features-section section-tiles">
-    <div class="grid">
-
-    <div class="tile tile-centered tile-rounded">
-        <h3 class="tile-name">Mom is so fat hello.</h3>
-        <p class="tile-desc">bruck brakc jfkslaöj did jasdkfjö diene mutter ist so.</p>
-      </div>
-
-      <div class="tile tile-half tile-rounded">
-        <h3 class="tile-name">Track</h3>
-        <p class="tile-desc">Track your Tichu game rounds effortlessly. Keep count of wins, losses, and game progress with a simple, intuitive interface.</p>
-        <img src="{{ url_for('static', filename='frames/iPhone-Pro.png') }}" class="tile-image">
-      </div>
-
-      <div class="tile tile-half tile-rounded">
-        <h3 class="tile-name">History</h3>
-        <p class="tile-desc">Observe your full history of Tichu Games in full detail. Analyze your preformance over time with the Elo-Graph.</p>
-      </div>
-
-      <div class="tile tile-centered tile-rounded">
-        <h3 class="tile-name">Synced across Devices</h3>
-        <p class="tile-desc">All changes everywhere. Instantely.</p>
-        <img src="{{ url_for('static', filename='frames/iPad-Pro.png') }}" class="tile-image">
-      </div>
-
-    </div>
-  </section>
 
   <section class="landing-hero">
     <div class="landing-hero-grid-2">
-      <div class="landing-hero-copy">
-         <img src="{{ url_for('static', filename='symbols/github.png') }}" class="github-logo">
-        <a href="https://github.com/leonhtm/tichu" class="landing-link">Tichu Tracker is open Source.</a>
+      <div class="landing-hero-copy-2 build-in">
+        <h1 class="landing-title-2">Free and without Ads.</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section section-tiles">
+    <div class="grid">
+
+      <div class="tile tile-centered tile-rounded  build-in">
+        <h3 class="tile-name">Score. Play. Edit.</h3>
+        <p class="tile-desc">Keep a detailed score of your Tichu games. players can enter scores from any device, and you can edit or delete rounds at any time, even after the game is finished.</p>
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.play.3.png') }}" class="tile-image">
+      </div>
+
+      <div class="tile tile-half tile-rounded  build-in">
+        <h3 class="tile-name">Discover exciting Statistics.</h3>
+        <p class="tile-desc">Analyze your performance of Tichu games with 12+ statistics across five different timeframes and compare it with your friends.</p>
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.stats.cut.png') }}" class="tile-image-stats">
+      </div>
+
+      <div class="tile tile-half tile-rounded  build-in">
+        <h3 class="tile-name">Scroll Through Full History.</h3>
+        <p class="tile-desc">TichuStats keeps a detailed history of all your Tichu games. You can easily track who played bombs in each round or review how many Big Tichu you prevented in a single game. </p>
+        <img src="{{ url_for('static', filename='content/iPhone/iphone.history.cut.png') }}" class="tile-image-history">
+      </div>
+
+      <div class="tile tile-centered tile-rounded  build-in">
+        <h3 class="tile-name">Synced Across Devices.</h3>
+        <p class="tile-desc">TichuStats seamlessly synchronizes all your data. You can switch devices mid-game and continue right where you left off, with everything updating instantly.</p>
+        <img src="{{ url_for('static', filename='content/ipad.iphone.play.won.png') }}" class="tile-image">
       </div>
 
     </div>
+  </section>
+
+  <section class="section-devices">
+  <section class="landing-hero build-in">
+    <div class="landing-hero-grid">
+      <div class="landing-hero-copy-2">
+        <h1 class="landing-title">Available Across Devices.</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-devices">
+    <div class="devices-container">
+      <div class="devices-item build-in" style="transition-delay: 0ms;">
+        <div class="devices-item-icon">
+          <img src="{{ url_for('static', filename='symbols/iphone.png') }}">
+        </div>
+        <h3 class="devices-item-label">iPhone</h3>
+      </div>
+
+      <div class="devices-item build-in" style="transition-delay: 100ms;">
+        <div class="devices-item-icon">
+          <img src="{{ url_for('static', filename='symbols/ipad.png') }}">
+        </div>
+        <h3 class="devices-item-label">iPad</h3>
+      </div>
+
+      <div class="devices-item build-in" style="transition-delay: 200ms;">
+        <div class="devices-item-icon-disabled">
+          <img src="{{ url_for('static', filename='symbols/android.png') }}">
+        </div>
+        <h3 class="devices-item-label-disabled">Android</h3>
+      </div>
+    </div>
+    <div class="devices-container">
+      <div class="devices-item build-in" style="transition-delay: 300ms;">
+        <div class="devices-item-icon">
+          <img src="{{ url_for('static', filename='symbols/vision.png') }}">
+        </div>
+        <h3 class="devices-item-label">Vision Pro</h3>
+      </div>
+      <div class="devices-item build-in" style="transition-delay: 400ms;">
+        <div class="devices-item-icon-disabled">
+          <img src="{{ url_for('static', filename='symbols/globe.png') }}">
+        </div>
+        <h3 class="devices-item-label-disabled">Web</h3>
+      </div>
+    </div>
+  </section>
+</section>
+
+  <section class="landing-hero build-in">
+    <div class="landing-hero-grid-4">
+      <div class="landing-hero-copy-3">
+        <h1 class="landing-title-2">Questions? Answers.</h1>
+      </div>
+    </div>
+
+    <section class="accordion-holder">
+      <ul class="accordion" id="faq-accordion">
+        <li class="accordion-item build-in">
+          <h3 class="accordion-title">
+            <button class="accordion-button" aria-expanded="false">
+              <span>Who made TichuStats?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-tray">
+            <div class="accordion-content">
+              <div class="accordion-content-paragraph">
+                <p>TichuStats is made by me: Leon. I am a physics student from Bern, Switzerland 🇨🇭. I'm a huge fan of the tichu card game myself and thought that all existing apps were suboptimal. So I made one myself. The TichuStats app is made by fans for fans.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item build-in">
+          <h3 class="accordion-title">
+            <button class="accordion-button" aria-expanded="false">
+              <span>Is TichuStats open source?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-tray">
+            <div class="accordion-content">
+              <div class="accordion-content-paragraph">
+                <p>TichuStats is open sourced on <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. You can find the code <a href="https://github.com/LeonHTM/TichuStats" class="faq-link">here</a>. Additionally you can find the code for the server <a href="https://github.com/LeonHTM/TichuStatsServer" class="faq-link">here</a>. The code for this page is <a href="https://github.com/LeonHTM/tichu.dev" class="faq-link">here</a>.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item build-in">
+          <h3 class="accordion-title">
+            <button class="accordion-button" aria-expanded="false">
+              <span>How can I give feedback?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-tray">
+            <div class="accordion-content">
+              <div class="accordion-content-paragraph">
+                <p>Write me an email: <a href="mailto:leon@tichu.dev" class="faq-link">leon@tichu.dev</a> or review TichuStats inside the App Store. Additionally you can create a pull request on <a href="https://github.com/LeonHTM" class="faq-link">Github</a>.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item build-in">
+          <h3 class="accordion-title">
+            <button class="accordion-button" aria-expanded="false">
+              <span>How can I support TichuStats?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-tray">
+            <div class="accordion-content">
+              <div class="accordion-content-paragraph">
+                <p>You can create pull requests on <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. If you want to support me monetarily (I currently have to pay 135 USD a year for the App Store, plus server costs), you can <a href="" class="faq-link">buy me a coffee</a>.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item build-in">
+          <h3 class="accordion-title">
+            <button class="accordion-button" aria-expanded="false">
+              <span>Does TichuStats own the rights to Tichu?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-tray">
+            <div class="accordion-content">
+              <div class="accordion-content-paragraph">
+                <p>The Tichu brand and everything around it is owned by <a href="https://fatamorgana.ch" class="faq-link">Fata Morgana</a>.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item build-in">
+          <h3 class="accordion-title">
+            <button class="accordion-button" aria-expanded="false">
+              <span>Does TichuStats collect private data or track you?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-tray">
+            <div class="accordion-content">
+              <div class="accordion-content-paragraph">
+                <p>TichuStats does neither collect private data nor store private data whatsoever. It also does also not track you. TichuStats only stores your mail and the data about your tichu games you enter into the app yourself.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
   </section>
 
   <footer>
     Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. All rights reserved.
   </footer>
 
+<script>
+  // Fade in + slide up when elements enter the viewport
+let lastScrollY = window.scrollY;
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    const scrollingDown = window.scrollY > lastScrollY;
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    } else if (scrollingDown) {
+      // Scrolling down and element leaves through the top:
+      // keep it visible, no reverse animation.
+      entry.target.classList.add('is-visible');
+    } else {
+      // Scrolling up and element leaves through the bottom:
+      // reverse the animation.
+      entry.target.classList.remove('is-visible');
+    }
+
+  });
+
+  lastScrollY = window.scrollY;
+
+}, {
+  threshold: 0.2
+});
+
+document.querySelectorAll('.build-in').forEach(el => {
+  observer.observe(el);
+});
+
+  //iPhone Scroll animations
+  const phoneWrapper = document.querySelector('.phone-row-wrapper');
+  const phonesUp = document.querySelectorAll('.build-in-iphone');
+  const phonesDown = document.querySelectorAll('.build-in-iphone-down');
+
+  //Starting Offset*/
+  const startOffset = 30;
+  function updatePhones() {
+
+    if (!phoneWrapper) return;
+    const wrapperRect = phoneWrapper.getBoundingClientRect();
+
+    //Animation starts when the phone row reaches 90% of the viewport height.
+    const startPoint = window.innerHeight * 0.9;
+
+
+    //Animation finishes after the user has scrolled considerably further.  
+    const endPoint = window.innerHeight * -0.2;
+
+
+    //Scroll Progress
+    let progress =
+      (startPoint - wrapperRect.top) /
+      (startPoint - endPoint);
+
+    progress = Math.max(0, Math.min(1, progress));
+
+    //iPhones moving up
+    const yUp = startOffset * (1 - progress);
+    phonesUp.forEach(phone => {
+      phone.style.transform = `translateY(${yUp}px)`;
+    });
+
+    //iPhones moving down
+    const yDown = -startOffset * (1 - progress);
+    phonesDown.forEach(phone => {
+      phone.style.transform = `translateY(${yDown}px)`;
+    });
+  }
+
+  window.addEventListener('scroll', updatePhones, {
+    passive: true
+  });
+
+  window.addEventListener('resize', updatePhones);
+
+  updatePhones();
+
+  //Accordion
+  document.querySelectorAll('.accordion-button').forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+      const expanded =
+        btn.getAttribute('aria-expanded') === 'true';
+
+      btn.setAttribute(
+        'aria-expanded',
+        String(!expanded)
+      );
+
+      const tray =
+        btn.closest('.accordion-item')
+           .querySelector('.accordion-tray');
+
+      tray.classList.toggle(
+        'is-open',
+        !expanded
+      );
+
+    });
+
+  });
+</script>
 </body>
 </html>
