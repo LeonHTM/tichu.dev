@@ -600,36 +600,35 @@ main {
 }
 
 
-
-/* PHONE SCROLL */
-
 .phone-row-wrapper {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  overflow: hidden;
-  width: 100%;
-  min-height: 650px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    min-height: 750px;
+    overflow-x: hidden;
+    overflow-y:hidden;
 }
 
 .phone-row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-block-start: 10px;
-  margin-left: -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: max-content;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .phone-frame {
-  position: relative;
-  flex: 0 0 458px;
-  width: 458px;
-  aspect-ratio: 500 / 500;
+    --phone-width: 550px;
+
+    width: var(--phone-width);
+    aspect-ratio: 1 / 1;
+
+    /* Remove invisible part of the PNG */
+    margin-right: calc(var(--phone-width) * -0.404);
 }
 
-.phone-frame:not(:first-child) {
-  margin-left: -120px;
-}
 
 .phone-frame .content-img {
   position: absolute;
@@ -651,30 +650,37 @@ main {
   will-change: transform;
 }
 
-
- @media (max-width: 768px) {
-
-.phone-row-wrapper {
-  display:none;
+@media(max-width:768px){
+  .phone-row-wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    min-height: 500px;
+    overflow-x: hidden;
+    overflow-y:hidden;
 }
 
 .phone-row {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  gap: 10px;
-
-  /* Center the entire 5-phone group */
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: max-content;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .phone-frame {
-  position: relative;
-  flex: 0 0 calc((200vw - 50px) / 3);
-  aspect-ratio: 500 / 500;
+    --phone-width: 300px;
+
+    width: var(--phone-width);
+    aspect-ratio: 1 / 1;
+
+    /* Remove invisible part of the PNG */
+    margin-right: calc(var(--phone-width) * -0.404);
+}
 }
 
-}
 
 
 /* DEVICES */
