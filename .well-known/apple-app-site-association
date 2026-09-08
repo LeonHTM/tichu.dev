@@ -1,0 +1,14 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "C6Q66KHWSY.com.Drakynem.Tichu"],
+             "components": []
+           }
+       ]
+   },
+   "webcredentials": {
+      "apps": ["C6Q66KHWSY.com.Drakynem.Tichu"]
+   }
+
+}
