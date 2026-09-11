@@ -8,7 +8,7 @@ def create_app():
 
     app = Flask(
         __name__,
-        template_folder="routes"
+        template_folder="templates"
     )
 
     app.register_blueprint(passkey_bp)
