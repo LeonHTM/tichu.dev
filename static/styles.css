@@ -640,9 +640,9 @@ main {
 
 .tile-image-stats {
   margin-top: 10%;
-  width: 125%;
-  margin-left: -12.5%;
-  margin-right: -12.5%;
+  width: 200%;
+  margin-left: -50%;
+  margin-right: -30.5%;
   display: flex;
   justify-content: center;
 }
