@@ -47,18 +47,30 @@
           <h1 class="landing-title">The ultimate Tichu companion app.</h1>
         {% endif%}
         {% if lang == "de" %}
-          <p class="landing-subtitle">Mit TichuStats kannst du ganz einfach deine Spielstände eintragen und dein Tichu-Spiel analysieren. Du erhältst einen Einblick in deine Performance in unterschiedlichen Aspsekten über Zeit. Alles gratis und ohne Werbung.</p>
+          <p class="landing-subtitle">Mit TichuStats kannst du ganz einfach deine Spielstände eintragen und dein Tichu-Spiel analysieren. Alle deine Tichu-Spiele an einem Ort, gratis und ohne Werbung.</p>
         {% elif lang == "el" %}
           <p class="landing-subtitle">Με το TichuStats μπορείς εύκολα να καταγράφεις τα σκορ σου και να αναλύεις το παιχνίδι σου στο Tichu. Δες την απόδοσή σου σε διάφορους τομείς με την πάροδο του χρόνου. Εντελώς δωρεάν και χωρίς διαφημίσεις.</p>
         {% else %}
-          <p class="landing-subtitle">TichuStats allows you to effortlessly track scores and analyze your Tichu gameplay. Gain insights into your performance with statistics across time, completely free and ad-free.</p>
+          <p class="landing-subtitle">TichuStats allows you to effortlessly track scores and analyze your Tichu gameplay. Gain insights into your performance with statistics across time, completely free withoud ads.</p>
         {% endif%}
         <div class="store-buttons">
           <a href="https://testflight.apple.com/join/3gzksEDd" aria-label="Download on App Store" >
-            <img src="{{ url_for('static', filename='download/downloadappstore.svg') }}" alt="Download on the App Store" />
+          {% if lang == "de" %}
+            <img src="{{ url_for('static', filename='download/de/downloadappstore.svg') }}" alt="Laden im App Store" />
+          {% elif lang == "el" %}
+            <img src="{{ url_for('static', filename='download/el/downloadappstore.svg') }}" alt="Λήψη στο App Store" />
+          {% else %}
+            <img src="{{ url_for('static', filename='download/en/downloadappstore.svg') }}" alt="Download on the App Store" />
+          {% endif%}
           </a>
           <a href="" aria-label="Get it on Google Play" class="store-buttons-disabled">
-            <img src="{{ url_for('static', filename='download/downloadgoogleplay.svg') }}" alt="Get it on Google Play" />
+          {% if lang == "de" %}
+             <img src="{{ url_for('static', filename='download/de/downloadgoogleplay.svg') }}" alt="Jetzt bei Google Play" />
+          {% elif lang == "el" %}
+            <img src="{{ url_for('static', filename='download/el/downloadgoogleplay.svg') }}" alt="Αποκτήστε το στο Google Play" />
+          {% else %}
+            <img src="{{ url_for('static', filename='download/en/downloadgoogleplay.svg') }}" alt="Get it on Google Play" />
+          {% endif%}
           </a>
         </div>
       </div>
@@ -415,9 +427,9 @@
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
               {% if lang == "de" %}
-                 <p>TichuStats sammelt, speichert oder tracked keine persönlichen Daten. Wir speichern unter Umständen deine E-Mail Adresse und deine Tichu-Daten, welche du in die App einträgst.Für mehr Informationen, bitte schau dir die <a href="/privacy" class="faq-link">Datenschutzrichtlinie</a> an.</p>
+                 <p>TichuStats sammelt, speichert oder tracked keine persönlichen Daten. Wir speichern unter Umständen deine E-Mail Adresse und deine Tichu-Daten, welche du in die App einträgst.Für mehr Informationen, bitte schau dir die <a href="/de/privacy" class="faq-link">Datenschutzrichtlinie</a> an.</p>
               {% elif lang == "el" %}
-                 <p>Το TichuStats δεν συλλέγει, δεν αποθηκεύει και δεν παρακολουθεί προσωπικά δεδομένα σου. Ενδέχεται να διατηρούμε τη διεύθυνση email σου και τα δεδομένα των παιχνιδιών Tichu που επιλέγεις να καταχωρήσεις στην εφαρμογή. Για περισσότερες πληροφορίες, δες την <a href="/privacy" class="faq-link">πολιτική απορρήτου</a>.</p>
+                 <p>Το TichuStats δεν συλλέγει, δεν αποθηκεύει και δεν παρακολουθεί προσωπικά δεδομένα σου. Ενδέχεται να διατηρούμε τη διεύθυνση email σου και τα δεδομένα των παιχνιδιών Tichu που επιλέγεις να καταχωρήσεις στην εφαρμογή. Για περισσότερες πληροφορίες, δες την <a href="/el/privacy" class="faq-link">πολιτική απορρήτου</a>.</p>
               {% else %}
                 <p>TichuStats does not collect, store, or track any of your private data. We possibly retain your email address and the Tichu game data that you choose to enter into the app. For more information, please review our <a href="/privacy" class="faq-link">privacy policy</a>.</p>
               {% endif %}
@@ -431,11 +443,11 @@
 
 {% if lang == "de" %}
   <footer class ="footer-black">
-    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Alle Rechte vorbehalten. <a href="/privacy" class="footer-link">Datenschutzrichtlinie</a>
+    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Alle Rechte vorbehalten. <a href="/de/privacy" class="footer-link">Datenschutzrichtlinie</a>
   </footer>
 {% elif lang == "el" %}
   <footer class ="footer-black">
-    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Με επιφύλαξη παντός δικαιώματος. <a href="/privacy" class="footer-link">Πολιτική απορρήτου</a>
+    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Με επιφύλαξη παντός δικαιώματος. <a href="/el/privacy" class="footer-link">Πολιτική απορρήτου</a>
   </footer>
 {% else %}
   <footer class ="footer-black">

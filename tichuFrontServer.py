@@ -45,6 +45,7 @@ def create_app():
 
         return redirect(url_for("localized_dashboard", lang=lang))
 
+
     @app.route("/<lang>", methods=["GET"])
     def localized_dashboard(lang):
         if lang not in SUPPORTED_LANGUAGES:
@@ -52,8 +53,16 @@ def create_app():
 
         return render_template("main.html", lang=lang)
 
+    @app.route("/privacy", methods=["GET"])
+    def privacy():
+        lang = request.accept_languages.best_match(
+                    SUPPORTED_LANGUAGES
+                ) or "en"
+
+        return redirect(url_for("localized_privacy", lang=lang))
+
     @app.route("/<lang>/privacy", methods=["GET"])
-    def privacy(lang):
+    def localized_privacy(lang):
         if lang not in SUPPORTED_LANGUAGES:
             return render_template("404.html", lang=detect_language()), 404
 
