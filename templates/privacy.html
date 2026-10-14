@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - TichuStats</title>
+  <title>{% if lang == "de" %}Datenschutzerklärung{% elif lang == "el" %}Πολιτική απορρήτου{% else %}Privacy Policy{% endif %} - TichuStats</title>
   <link rel="stylesheet" href="/static/styles.css?v=1.0">
   <link rel="icon" href="{{ url_for('static', filename='TichuIconV1-iOS-Default-128x128@1x.png') }}">
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='TichuIconV1-iOS-Default-128x128@1x.png') }}">
@@ -19,11 +19,487 @@
         </a>
       </div>
       <div class="nav-links">
-      <a href="https://drakynem.com" class="nav-link active">Drakynem</a>
+      <!--<a href="https://drakynem.com" class="nav-link active">Drakynem</a>-->
+      <select class="lang-switch" aria-label="Language" onchange="window.location.href = this.value">
+        {% for l in language_links %}
+          <option value="{{ l.url }}"{% if l.code == lang %} selected{% endif %}>{{ l.name }}</option>
+        {% endfor %}
+      </select>
     </div>
   </nav>
     <main class="privacy-policy">
   <article class="privacy-policy-content">
+  {% if lang == "de" %}
+
+    <h1>Datenschutzerklärung</h1>
+
+    <p class="privacy-policy-updated">
+      Zuletzt aktualisiert: 7. September 2026
+    </p>
+
+    <p>
+      TichuStats („wir“, „unser“ oder „uns“) respektiert Ihre Privatsphäre.
+      Diese Datenschutzerklärung erläutert, welche Informationen wir erheben,
+      wie wir sie verwenden und wie Sie Ihr Konto und die zugehörigen Daten
+      löschen können.
+    </p>
+
+    <section>
+      <h2>1. Informationen, die wir erheben</h2>
+
+      <p>Wenn Sie TichuStats nutzen, können wir Folgendes erheben und speichern:</p>
+
+      <ul>
+        <li>
+          <strong>E-Mail-Adresse:</strong> wird verwendet, um Ihr Konto zu
+          erstellen und zu verwalten sowie für kontobezogene Kommunikation.
+        </li>
+
+        <li>
+          <strong>Profilname:</strong> ein Name oder Spitzname, den Sie in der
+          App verwenden möchten. Sie müssen nicht Ihren echten Namen angeben.
+        </li>
+
+        <li>
+          <strong>Profilbild:</strong> sofern Sie eines hinzufügen, wird es als
+          Ihr Profilbild in der App verwendet.
+        </li>
+
+        <li>
+          <strong>Spielinformationen und Statistiken:</strong> Informationen,
+          die durch Ihre Nutzung der App entstehen, wie z. B. Ihre ELO-Wertung,
+          Gewinnquote, Erfolge und andere spielbezogene Statistiken.
+        </li>
+
+        <li>
+          <strong>Grundlegende Kontoinformationen:</strong> wie z. B. das
+          Datum der Kontoerstellung.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Wie wir Ihre Informationen verwenden</h2>
+
+      <p>
+        Wir verwenden diese Informationen, um TichuStats zu betreiben und
+        bereitzustellen, unter anderem um:
+      </p>
+
+      <ul>
+        <li>Ihr Konto zu erstellen und zu verwalten.</li>
+        <li>Ihr Konto zu authentifizieren und abzusichern.</li>
+        <li>
+          Ihren gewählten Profilnamen und Ihr Profilbild in der App anzuzeigen.
+        </li>
+        <li>Die Funktionen und Möglichkeiten des Spiels bereitzustellen.</li>
+        <li>
+          Spielwertungen, Statistiken und Erfolge zu berechnen und anzuzeigen.
+        </li>
+        <li>Die App zu pflegen und zu verbessern.</li>
+        <li>
+          Bei Bedarf mit Ihnen bezüglich Ihres Kontos zu kommunizieren.
+        </li>
+        <li>Die Sicherheit und Integrität des Dienstes zu gewährleisten.</li>
+      </ul>
+
+      <p>Wir verkaufen Ihre personenbezogenen Daten nicht.</p>
+    </section>
+
+    <section>
+      <h2>3. Für andere Nutzer sichtbare Informationen</h2>
+
+      <p>
+        Ihr gewählter Profilname, Ihr Profilbild, Ihre Spielwertung, Ihre
+        Statistiken, Erfolge und weitere spielbezogene Informationen können im
+        Rahmen der normalen Funktionsweise der App für andere Nutzer sichtbar
+        sein.
+      </p>
+
+      <p>
+        Ihre E-Mail-Adresse wird anderen Nutzern nicht öffentlich angezeigt,
+        es sei denn, dies ist für eine Funktion der App ausdrücklich
+        erforderlich und angegeben.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Wie Ihre Informationen gespeichert werden</h2>
+
+      <p>
+        Ihre Kontoinformationen werden auf einem von uns betriebenen und
+        gewarteten Server gespeichert.
+      </p>
+
+      <p>
+        Unsere Serverinfrastruktur nutzt <strong>Cloudflare</strong>, um
+        Dienste wie Domainverwaltung, Netzwerkanbindung und Sicherheit
+        bereitzustellen.
+      </p>
+
+      <p>
+        Cloudflare kann technische Informationen, die mit Anfragen an unseren
+        Dienst verbunden sind, verarbeiten, soweit dies für die Bereitstellung
+        seiner Infrastruktur- und Sicherheitsdienste erforderlich ist.
+      </p>
+
+      <p>
+        Weitere Informationen dazu, wie Cloudflare mit Informationen umgeht,
+        finden Sie in der <a href="https://www.cloudflare.com/privacypolicy/" class="faq-link">Datenschutzerklärung von Cloudflare</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Weitergabe von Informationen</h2>
+
+      <p>
+        Wir verkaufen oder vermieten Ihre personenbezogenen Daten nicht.
+      </p>
+
+      <p>
+        Wir können Dienstleister wie Cloudflare einsetzen, um Infrastruktur,
+        Netzwerk, Sicherheit und andere technische Leistungen bereitzustellen,
+        die für den Betrieb von TichuStats erforderlich sind.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Datenspeicherung und Kontolöschung</h2>
+
+      <p>
+        Wir speichern Ihre Kontoinformationen, solange Ihr Konto aktiv ist
+        oder solange dies für die Bereitstellung von TichuStats erforderlich
+        ist.
+      </p>
+
+      <p>
+        <strong>
+          Wenn Sie Ihr Konto löschen, werden die mit Ihrem Konto verbundenen
+          Informationen gelöscht, einschließlich Ihrer E-Mail-Adresse, Ihres
+          Profilnamens, Ihres Profilbilds und Ihrer spielbezogenen Statistiken.
+        </strong>
+      </p>
+
+      <p>
+        Wir bewahren Ihre Kontodaten nach der Kontolöschung nicht absichtlich
+        auf, außer wenn eine Aufbewahrung gesetzlich vorgeschrieben ist oder
+        wenn temporäre Kopien für einen begrenzten Zeitraum in technischen
+        Backups verbleiben.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Löschen Ihres Kontos</h2>
+
+      <p>
+        Sie können Ihr Konto über die Schaltfläche
+        <strong>„Konto löschen“</strong> im Profil-Tab löschen.
+      </p>
+
+      <p>
+        Falls Sie Ihr Konto nicht über die App löschen können, erreichen Sie
+        uns unter:
+        <a href="mailto:leon@tichu.dev">leon@tichu.dev</a>
+      </p>
+
+      <p>
+        Wir bearbeiten Ihre Anfrage innerhalb eines angemessenen Zeitraums.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Sicherheit</h2>
+
+      <p>
+        Wir ergreifen angemessene technische und organisatorische Maßnahmen,
+        um die von uns gespeicherten Informationen vor unbefugtem Zugriff,
+        Veränderung, Offenlegung oder Zerstörung zu schützen.
+      </p>
+
+      <p>
+        Dennoch ist keine Methode der elektronischen Speicherung oder
+        Übertragung über das Internet vollkommen sicher.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Datenschutz für Kinder</h2>
+
+      <p>
+        TichuStats erhebt nicht wissentlich personenbezogene Daten von
+        Kindern, soweit eine solche Erhebung nach geltendem Recht untersagt
+        ist.
+      </p>
+
+      <p>
+        Falls Sie der Ansicht sind, dass ein Kind unzulässigerweise
+        personenbezogene Daten angegeben hat, kontaktieren Sie uns bitte.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Änderungen dieser Datenschutzerklärung</h2>
+
+      <p>
+        Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren.
+        Wenn wir Änderungen vornehmen, passen wir das oben angegebene Datum
+        „Zuletzt aktualisiert“ an.
+      </p>
+    </section>
+
+    <section>
+      <h2>11. Kontakt</h2>
+
+      <p>
+        Wenn Sie Fragen zu dieser Datenschutzerklärung oder zu Ihren Daten
+        haben, kontaktieren Sie uns bitte unter:
+      </p>
+
+      <p>
+        <a href="mailto:leon@tichu.dev">leon@tichu.dev</a>
+      </p>
+    </section>
+
+  {% elif lang == "el" %}
+
+    <h1>Πολιτική απορρήτου</h1>
+
+    <p class="privacy-policy-updated">
+      Τελευταία ενημέρωση: 7 Σεπτεμβρίου 2026
+    </p>
+
+    <p>
+      Το TichuStats («εμείς», «μας» ή «δικό μας») σέβεται το απόρρητό σας. Η
+      παρούσα Πολιτική απορρήτου εξηγεί ποιες πληροφορίες συλλέγουμε, πώς τις
+      χρησιμοποιούμε και πώς μπορείτε να διαγράψετε τον λογαριασμό σας και τα
+      σχετικά δεδομένα.
+    </p>
+
+    <section>
+      <h2>1. Πληροφορίες που συλλέγουμε</h2>
+
+      <p>Όταν χρησιμοποιείτε το TichuStats, ενδέχεται να συλλέγουμε και να αποθηκεύουμε:</p>
+
+      <ul>
+        <li>
+          <strong>Διεύθυνση email:</strong> χρησιμοποιείται για τη δημιουργία
+          και τη διαχείριση του λογαριασμού σας και για επικοινωνία που
+          σχετίζεται με τον λογαριασμό.
+        </li>
+
+        <li>
+          <strong>Όνομα προφίλ:</strong> ένα όνομα ή ψευδώνυμο που επιλέγετε
+          να χρησιμοποιείτε στην εφαρμογή. Δεν χρειάζεται να χρησιμοποιήσετε
+          το πραγματικό σας όνομα.
+        </li>
+
+        <li>
+          <strong>Εικόνα προφίλ:</strong> εφόσον επιλέξετε να προσθέσετε μία,
+          χρησιμοποιείται ως εικόνα προφίλ σας στην εφαρμογή.
+        </li>
+
+        <li>
+          <strong>Πληροφορίες παιχνιδιού και στατιστικά:</strong> πληροφορίες
+          που προκύπτουν από τη χρήση της εφαρμογής, όπως η βαθμολογία ELO,
+          το ποσοστό νικών, τα επιτεύγματα και άλλα στατιστικά που αφορούν τα
+          παιχνίδια.
+        </li>
+
+        <li>
+          <strong>Βασικές πληροφορίες λογαριασμού:</strong> όπως η ημερομηνία
+          δημιουργίας του λογαριασμού σας.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Πώς χρησιμοποιούμε τις πληροφορίες σας</h2>
+
+      <p>
+        Χρησιμοποιούμε αυτές τις πληροφορίες για να λειτουργούμε και να
+        παρέχουμε το TichuStats, μεταξύ άλλων για να:
+      </p>
+
+      <ul>
+        <li>Δημιουργούμε και διαχειριζόμαστε τον λογαριασμό σας.</li>
+        <li>Πιστοποιούμε και ασφαλίζουμε τον λογαριασμό σας.</li>
+        <li>
+          Εμφανίζουμε το όνομα και την εικόνα προφίλ που έχετε επιλέξει μέσα
+          στην εφαρμογή.
+        </li>
+        <li>Παρέχουμε τις λειτουργίες και τις δυνατότητες του παιχνιδιού.</li>
+        <li>
+          Υπολογίζουμε και εμφανίζουμε βαθμολογίες, στατιστικά και
+          επιτεύγματα.
+        </li>
+        <li>Συντηρούμε και βελτιώνουμε την εφαρμογή.</li>
+        <li>
+          Επικοινωνούμε μαζί σας σχετικά με τον λογαριασμό σας, όταν είναι
+          απαραίτητο.
+        </li>
+        <li>Διατηρούμε την ασφάλεια και την ακεραιότητα της υπηρεσίας.</li>
+      </ul>
+
+      <p>Δεν πουλάμε τα προσωπικά σας δεδομένα.</p>
+    </section>
+
+    <section>
+      <h2>3. Πληροφορίες ορατές σε άλλους χρήστες</h2>
+
+      <p>
+        Το όνομα προφίλ, η εικόνα προφίλ, η βαθμολογία παιχνιδιού, τα
+        στατιστικά, τα επιτεύγματα και άλλες πληροφορίες που σχετίζονται με
+        τα παιχνίδια σας ενδέχεται να είναι ορατά σε άλλους χρήστες στο πλαίσιο
+        της κανονικής λειτουργίας της εφαρμογής.
+      </p>
+
+      <p>
+        Η διεύθυνση email σας δεν εμφανίζεται δημόσια σε άλλους χρήστες, εκτός
+        αν αυτό απαιτείται ρητά και δηλώνεται από κάποια λειτουργία της
+        εφαρμογής.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Πώς αποθηκεύονται οι πληροφορίες σας</h2>
+
+      <p>
+        Οι πληροφορίες του λογαριασμού σας αποθηκεύονται σε διακομιστή που
+        λειτουργεί και συντηρείται από εμάς.
+      </p>
+
+      <p>
+        Η υποδομή των διακομιστών μας χρησιμοποιεί το <strong>Cloudflare</strong>
+        για την παροχή υπηρεσιών όπως η διαχείριση domain, η συνδεσιμότητα
+        δικτύου και η ασφάλεια.
+      </p>
+
+      <p>
+        Το Cloudflare ενδέχεται να επεξεργάζεται τεχνικές πληροφορίες που
+        σχετίζονται με αιτήματα προς την υπηρεσία μας, στον βαθμό που αυτό
+        είναι απαραίτητο για την παροχή των υπηρεσιών υποδομής και ασφάλειάς
+        του.
+      </p>
+
+      <p>
+        Για περισσότερες πληροφορίες σχετικά με τον τρόπο που το Cloudflare
+        διαχειρίζεται τις πληροφορίες, ανατρέξτε στην <a href="https://www.cloudflare.com/privacypolicy/" class="faq-link">πολιτική απορρήτου του Cloudflare</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Κοινοποίηση πληροφοριών</h2>
+
+      <p>
+        Δεν πουλάμε και δεν ενοικιάζουμε τα προσωπικά σας δεδομένα.
+      </p>
+
+      <p>
+        Ενδέχεται να χρησιμοποιούμε παρόχους υπηρεσιών, όπως το Cloudflare,
+        για την παροχή υποδομής, δικτύωσης, ασφάλειας και άλλων τεχνικών
+        υπηρεσιών που είναι απαραίτητες για τη λειτουργία του TichuStats.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Διατήρηση δεδομένων και διαγραφή λογαριασμού</h2>
+
+      <p>
+        Διατηρούμε τις πληροφορίες του λογαριασμού σας όσο ο λογαριασμός σας
+        είναι ενεργός ή όσο χρειάζεται για την παροχή του TichuStats.
+      </p>
+
+      <p>
+        <strong>
+          Όταν διαγράφετε τον λογαριασμό σας, οι πληροφορίες που συνδέονται με
+          αυτόν διαγράφονται, συμπεριλαμβανομένων της διεύθυνσης email, του
+          ονόματος προφίλ, της εικόνας προφίλ και των στατιστικών των
+          παιχνιδιών σας.
+        </strong>
+      </p>
+
+      <p>
+        Δεν διατηρούμε εσκεμμένα τα δεδομένα του λογαριασμού σας μετά τη
+        διαγραφή, εκτός εάν η διατήρηση απαιτείται από τον νόμο ή εάν
+        προσωρινά αντίγραφα παραμένουν για περιορισμένο χρονικό διάστημα σε
+        τεχνικά αντίγραφα ασφαλείας.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Διαγραφή του λογαριασμού σας</h2>
+
+      <p>
+        Μπορείτε να διαγράψετε τον λογαριασμό σας χρησιμοποιώντας το κουμπί
+        <strong>«Διαγραφή λογαριασμού»</strong> στην καρτέλα Προφίλ.
+      </p>
+
+      <p>
+        Εάν δεν μπορείτε να διαγράψετε τον λογαριασμό σας μέσω της εφαρμογής,
+        μπορείτε να επικοινωνήσετε μαζί μας στο:
+        <a href="mailto:leon@tichu.dev">leon@tichu.dev</a>
+      </p>
+
+      <p>
+        Θα επεξεργαστούμε το αίτημά σας εντός εύλογου χρονικού διαστήματος.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Ασφάλεια</h2>
+
+      <p>
+        Λαμβάνουμε εύλογα τεχνικά και οργανωτικά μέτρα για την προστασία των
+        πληροφοριών που αποθηκεύουμε από μη εξουσιοδοτημένη πρόσβαση,
+        αλλοίωση, αποκάλυψη ή καταστροφή.
+      </p>
+
+      <p>
+        Ωστόσο, καμία μέθοδος ηλεκτρονικής αποθήκευσης ή μετάδοσης μέσω
+        διαδικτύου δεν είναι απολύτως ασφαλής.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Απόρρητο παιδιών</h2>
+
+      <p>
+        Το TichuStats δεν συλλέγει εν γνώσει του προσωπικά δεδομένα από
+        παιδιά, όταν μια τέτοια συλλογή απαγορεύεται από την ισχύουσα
+        νομοθεσία.
+      </p>
+
+      <p>
+        Εάν πιστεύετε ότι ένα παιδί έχει παράσχει προσωπικά δεδομένα με
+        ακατάλληλο τρόπο, παρακαλούμε επικοινωνήστε μαζί μας.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Αλλαγές στην παρούσα Πολιτική απορρήτου</h2>
+
+      <p>
+        Ενδέχεται να ενημερώνουμε την παρούσα Πολιτική απορρήτου κατά
+        διαστήματα. Εάν κάνουμε αλλαγές, θα ενημερώνουμε την ημερομηνία
+        «Τελευταία ενημέρωση» που αναγράφεται παραπάνω.
+      </p>
+    </section>
+
+    <section>
+      <h2>11. Επικοινωνία</h2>
+
+      <p>
+        Εάν έχετε ερωτήσεις σχετικά με την παρούσα Πολιτική απορρήτου ή τα
+        δεδομένα σας, παρακαλούμε επικοινωνήστε μαζί μας στο:
+      </p>
+
+      <p>
+        <a href="mailto:leon@tichu.dev">leon@tichu.dev</a>
+      </p>
+    </section>
+
+  {% else %}
+
     <h1>Privacy Policy</h1>
 
     <p class="privacy-policy-updated">
@@ -135,8 +611,6 @@
       <p>
         For more information about how Cloudflare handles information, please
         refer to <a href="https://www.cloudflare.com/privacypolicy/" class="faq-link">Cloudflare's privacy policy</a>.
-
-        
       </p>
     </section>
 
@@ -144,7 +618,7 @@
       <h2>5. Sharing of Information</h2>
 
       <p>
-        We do not sell or rent your personal information. People or companies who do are cunts.
+        We do not sell or rent your personal information.
       </p>
 
       <p>
@@ -245,14 +719,21 @@
       <p>
         <a href="mailto:leon@tichu.dev">leon@tichu.dev</a>
       </p>
-
     </section>
+
+  {% endif %}
   </article>
 </main>
 
 
-<footer class ="footer-black">
+<footer class="footer-black">
+  {% if lang == "de" %}
+    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Alle Rechte vorbehalten. <a href="/privacy" class="footer-link">Datenschutzerklärung</a>
+  {% elif lang == "el" %}
+    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Με επιφύλαξη παντός δικαιώματος. <a href="/privacy" class="footer-link">Πολιτική απορρήτου</a>
+  {% else %}
     Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. All rights reserved. <a href="/privacy" class="footer-link">Privacy Policy</a>
-  </footer>
+  {% endif %}
+</footer>
 </body>
 </html>

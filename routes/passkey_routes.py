@@ -6,11 +6,9 @@ passkey_bp = Blueprint("passkey", __name__, url_prefix="/passkey")
 
 # Forward Requests to backend
 def forward_request(path):
-    """
-    Forward an iOS request from tichuFrontServer to tichuServer.
+    
+    #Forward an iOS request from tichuFrontServer to tichuServer.
 
-    The iOS client never needs to know the backend server URL.
-    """
 
     url = f"{BACKEND_URL}{path}"
 
@@ -47,13 +45,13 @@ def forward_request(path):
             content_type="application/json",
         )
 
-    # Return backend's response directly 
+    # Return backend response directly 
     response = Response(
         backend_response.content,
         status=backend_response.status_code,
     )
 
-    # Preserve backend content type.
+    #Preserve backend content type.
     content_type = backend_response.headers.get("Content-Type")
 
     if content_type:

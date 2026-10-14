@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TichuStats</title>
-  <meta name="description" content="TichuStats it the ultimate Tichu companion app.">
+  <meta name="description" content="TichuStats is the ultimate Tichu companion app.">
   <link rel="stylesheet" href="/static/styles.css?v=1.0">
   <link rel="icon" href="{{ url_for('static', filename='tichu/TichuIconV1-iOS-Default-128x128@1x.png') }}">
 </head>
@@ -18,7 +18,12 @@
       <a href="/" class="nav-title">TichuStats</a>
     </div>
     <div class="nav-links">
-      <a href="https://drakynem.com" class="nav-link active">Drakynem</a>
+      <!--<a href="https://drakynem.com" class="nav-link active">Drakynem</a>-->
+      <select class="lang-switch" aria-label="Language" onchange="window.location.href = this.value">
+        {% for l in language_links %}
+          <option value="{{ l.url }}"{% if l.code == lang %} selected{% endif %}>{{ l.name }}</option>
+        {% endfor %}
+      </select>
     </div>
   </nav>
 
@@ -27,10 +32,27 @@
 
       <div class="landing-hero-copy">
         <img src="{{ url_for('static', filename='tichu/TichuIconV1-iOS-Default-1024x1024@1x.png') }}" alt="Tichu App Logo" class="landing-logo" />
-        <p class="landing-icon-subtitle">TichuStats</p>
-        <h1 class="landing-title">The ultimate Tichu companion app.</h1>
-        <p class="landing-subtitle">TichuStats allows you to effortlessly track scores and analyze your Tichu gameplay. Gain insights into your performance with statistics across five different timeframes, completely free and ad-free.</p>
-
+        {% if lang == "de" %}
+          <p class="landing-icon-subtitle">TichuStats</p>
+        {% elif lang == "el" %}
+          <p class="landing-icon-subtitle">TichuStats</p>
+        {% else %}
+          <p class="landing-icon-subtitle">TichuStats</p>
+        {% endif%}
+        {% if lang == "de" %}
+          <h1 class="landing-title">Die ultimate Tichu-App.</h1>
+        {% elif lang == "el" %}
+          <h1 class="landing-title">Η απόλυτη εφαρμογή για το Tichu.</h1>
+        {% else %}
+          <h1 class="landing-title">The ultimate Tichu companion app.</h1>
+        {% endif%}
+        {% if lang == "de" %}
+          <p class="landing-subtitle">Mit TichuStats kannst du ganz einfach deine Spielstände eintragen und dein Tichu-Spiel analysieren. Du erhältst einen Einblick in deine Performance in unterschiedlichen Aspsekten über Zeit. Alles gratis und ohne Werbung.</p>
+        {% elif lang == "el" %}
+          <p class="landing-subtitle">Με το TichuStats μπορείς εύκολα να καταγράφεις τα σκορ σου και να αναλύεις το παιχνίδι σου στο Tichu. Δες την απόδοσή σου σε διάφορους τομείς με την πάροδο του χρόνου. Εντελώς δωρεάν και χωρίς διαφημίσεις.</p>
+        {% else %}
+          <p class="landing-subtitle">TichuStats allows you to effortlessly track scores and analyze your Tichu gameplay. Gain insights into your performance with statistics across time, completely free and ad-free.</p>
+        {% endif%}
         <div class="store-buttons">
           <a href="https://testflight.apple.com/join/3gzksEDd" aria-label="Download on App Store" >
             <img src="{{ url_for('static', filename='download/downloadappstore.svg') }}" alt="Download on the App Store" />
@@ -72,7 +94,13 @@
   <section class="landing-hero">
     <div class="landing-hero-grid-2">
       <div class="landing-hero-copy-2 build-in">
+      {% if lang == "de" %}
+        <h1 class="landing-title-2">Gratis und ohne Werbung.</h1>
+      {% elif lang == "el" %}
+        <h1 class="landing-title-2">Δωρεάν και χωρίς διαφημίσεις.</h1>
+      {% else %}
         <h1 class="landing-title-2">Free and without Ads.</h1>
+      {% endif%}
       </div>
     </div>
   </section>
@@ -81,26 +109,74 @@
     <div class="grid">
 
       <div class="tile tile-centered tile-rounded  build-in">
+      {% if lang == "de" %}
+        <h3 class="tile-name">Eintragen. Spielen. Bearbeiten.</h3>
+      {% elif lang == "el" %}
+        <h3 class="tile-name">Καταγραφή. Παιχνίδι. Επεξεργασία.</h3>
+      {% else %}
         <h3 class="tile-name">Score. Play. Edit.</h3>
-        <p class="tile-desc">Keep a detailed score of your Tichu games. players can enter scores from any device, and you can edit or delete rounds at any time, even after the game is finished.</p>
+      {% endif%}
+      {% if lang == "de" %}
+        <p class="tile-desc">Trage Spiele in vollem Detail ein. Alle Spieler können Ergebnisse von irgendeinem ihrer Geräte eintragen. Runden können nachträglich bearbeitet oder gelöscht werden, sogar wenn das Spiel gerade geendet hat.</p>
+      {% elif lang == "el" %}
+        <p class="tile-desc">Κράτα αναλυτικό σκορ των παιχνιδιών σου στο Tichu. Οι παίκτες μπορούν να καταχωρούν σκορ από οποιαδήποτε συσκευή και μπορείς να επεξεργαστείς ή να διαγράψεις γύρους ανά πάσα στιγμή, ακόμα και μετά το τέλος του παιχνιδιού.</p>
+      {% else %}
+        <p class="tile-desc">Keep a detailed score of your Tichu games. Players can enter scores from any device, and you can edit or delete rounds at any time, even after the game is finished.</p>
+      {% endif%}
         <img src="{{ url_for('static', filename='content/iPhone/iphone.play.3.png') }}" class="tile-image">
       </div>
 
       <div class="tile tile-half tile-rounded  build-in">
+      {% if lang == "de" %}
+        <h3 class="tile-name">Entdecke nützliche Statistiken.</h3>
+      {% elif lang == "el" %}
+        <h3 class="tile-name">Ανακάλυψε συναρπαστικά στατιστικά.</h3>
+      {% else %}
         <h3 class="tile-name">Discover exciting Statistics.</h3>
-        <p class="tile-desc">Analyze your performance of Tichu games with 12+ statistics across five different timeframes and compare it with your friends.</p>
+      {% endif%}
+      {% if lang == "de" %}
+         <p class="tile-desc">Analysiere deine Performance in Tichu Spielen mithilfe von mehr als 12 Statistiken im Zeitverlauf und vergleiche diese mit deinen Freunden.</p>
+      {% elif lang == "el" %}
+         <p class="tile-desc">Ανάλυσε την απόδοσή σου στο Tichu με περισσότερα από 12 στατιστικά στον χρόνο και σύγκρινέ την με τους φίλους σου.</p>
+      {% else %}
+        <p class="tile-desc">Analyze your performance of Tichu games with 12+ statistics across time and compare it with your friends.</p>
+      {% endif%}
         <img src="{{ url_for('static', filename='content/iPhone/iphone.stats.cut.png') }}" class="tile-image-stats">
       </div>
 
       <div class="tile tile-half tile-rounded  build-in">
+      {% if lang == "de" %}
+        <h3 class="tile-name">Scrolle durch all deine Tichu-Spiele.</h3>
+      {% elif lang == "el" %}
+        <h3 class="tile-name">Ξεφύλλισε ολόκληρο το ιστορικό σου.</h3>
+      {% else %}
         <h3 class="tile-name">Scroll Through Full History.</h3>
+      {% endif%}
+      {% if lang == "de" %}
+       <p class="tile-desc">TichuStats speichert alle deine Tichu-Spiele in vollem Detail. Du kannst ganz einfach nachschauen, wer wen gebombt hat oder wieviel Bomben dir über das ganze Spiel um die Ohren geflogen sind.</p>
+      {% elif lang == "el" %}
+       <p class="tile-desc">Το TichuStats κρατά αναλυτικό ιστορικό όλων των παιχνιδιών σου στο Tichu. Μπορείς εύκολα να δεις ποιος έπαιξε βόμβες σε κάθε γύρο ή πόσα Big Tichu απέτρεψες σε ένα μόνο παιχνίδι.</p>
+      {% else %}
         <p class="tile-desc">TichuStats keeps a detailed history of all your Tichu games. You can easily track who played bombs in each round or review how many Big Tichu you prevented in a single game. </p>
+      {% endif%}
         <img src="{{ url_for('static', filename='content/iPhone/iphone.history.cut.png') }}" class="tile-image-history">
       </div>
 
       <div class="tile tile-centered tile-rounded  build-in">
+      {% if lang == "de" %}
+        <h3 class="tile-name">Synchronisiert zwischen all deinen Geräten.</h3>
+      {% elif lang == "el" %}
+        <h3 class="tile-name">Συγχρονισμένο σε όλες τις συσκευές σου.</h3>
+      {% else %}
         <h3 class="tile-name">Synced Across Devices.</h3>
+      {% endif%}
+      {% if lang == "de" %}
+         <p class="tile-desc">TichuStats synchronisiert all deine Daten. Du kannst mitten im Spiel das Gerät wechseln und einfach dort fortfahren wo du aufgehört hast.</p>
+      {% elif lang == "el" %}
+         <p class="tile-desc">Το TichuStats συγχρονίζει απρόσκοπτα όλα τα δεδομένα σου. Μπορείς να αλλάξεις συσκευή στη μέση του παιχνιδιού και να συνεχίσεις από εκεί που σταμάτησες, με όλα να ενημερώνονται άμεσα.</p>
+      {% else %}
         <p class="tile-desc">TichuStats seamlessly synchronizes all your data. You can switch devices mid-game and continue right where you left off, with everything updating instantly.</p>
+      {% endif%}
         <img src="{{ url_for('static', filename='content/ipad.iphone.play.won.png') }}" class="tile-image">
       </div>
 
@@ -111,8 +187,13 @@
   <section class="landing-hero build-in">
     <div class="landing-hero-grid">
       <div class="landing-hero-copy-4">
+      {% if lang == "de" %}
+        <h1 class="landing-title">Auf all deinen Geräten verfügbar.</h1>
+      {% elif lang == "el" %}
+        <h1 class="landing-title">Διαθέσιμο σε όλες τις συσκευές σου.</h1>
+      {% else %}
         <h1 class="landing-title">Available Across Devices.</h1>
-      </div>
+      {% endif%}
     </div>
   </section>
 
@@ -158,7 +239,13 @@
   <section class="landing-hero">
     <div class="landing-hero-grid-4">
       <div class="landing-hero-copy-3 build-in">
+      {% if lang == "de" %}
+         <h1 class="landing-title-2">Fragen? Antworetn.</h1>
+      {% elif lang == "el" %}
+         <h1 class="landing-title-2">Ερωτήσεις; Απαντήσεις.</h1>
+      {% else %}
         <h1 class="landing-title-2">Questions? Answers.</h1>
+      {% endif %}
       </div>
     </div>
 
@@ -167,7 +254,13 @@
         <li class="accordion-item build-in">
           <h3 class="accordion-title">
             <button class="accordion-button" aria-expanded="false">
+            {% if lang == "de" %}
+              <span>Wer steckt hinter TichuStats?</span>
+            {% elif lang == "el" %}
+              <span>Ποιος δημιούργησε το TichuStats;</span>
+            {% else %}
               <span>Who made TichuStats?</span>
+            {% endif %}
               <span class="accordion-icon">
                 <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -176,7 +269,13 @@
           <div class="accordion-tray">
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
+               {% if lang == "de" %}
+                <p>TichuStats wird von mir gemacht: Leon. Ich bin Physik-Student aus Bern,🇨🇭. Ich bin selber ein Riesenfan vom Tichu-Kartenspiel und war der Meinung das alle bisherigen Tichu-Apps suboptimal waren: Also habe ich selber eine gemacht.</p>
+               {% elif lang == "el" %}
+                <p>Το TichuStats δημιουργήθηκε από εμένα, τον Leon. Είμαι φοιτητής φυσικής από τη Βέρνη της Ελβετίας 🇨🇭. Είμαι μεγάλος fan του παιχνιδιού με κάρτες Tichu και θεώρησα ότι όλες οι υπάρχουσες εφαρμογές ήταν υποβέλτιστες. Έτσι έφτιαξα μία μόνος μου. Η εφαρμογή TichuStats φτιάχτηκε από fans για fans.</p>
+               {% else %}
                 <p>TichuStats is made by me: Leon. I am a physics student from Bern, Switzerland 🇨🇭. I'm a huge fan of the tichu card game myself and thought that all existing apps were suboptimal. So I made one myself. The TichuStats app is made by fans for fans.</p>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -184,7 +283,13 @@
         <li class="accordion-item build-in">
           <h3 class="accordion-title">
             <button class="accordion-button" aria-expanded="false">
+            {% if lang == "de" %}
+              <span>Ist TichuStats open source?</span>
+            {% elif lang == "el" %}
+              <span>Είναι το TichuStats ανοιχτού κώδικα;</span>
+            {% else %}
               <span>Is TichuStats open source?</span>
+            {% endif %}
               <span class="accordion-icon">
                 <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -193,7 +298,13 @@
           <div class="accordion-tray">
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
+              {% if lang == "de" %}
+                 <p>TichuStats ist open sourced auf <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. Du findest den Code <a href="https://github.com/LeonHTM/TichuStats" class="faq-link">hier</a>, den Code für den Server <a href="https://github.com/LeonHTM/TichuStatsServer" class="faq-link">hier</a> und ausserdem den Code für diese Seite <a href="https://github.com/LeonHTM/tichu.dev" class="faq-link">hier</a>.</p>
+              {% elif lang == "el" %}
+                 <p>Το TichuStats είναι ανοιχτού κώδικα στο <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. Μπορείς να βρεις τον κώδικα <a href="https://github.com/LeonHTM/TichuStats" class="faq-link">εδώ</a>. Επιπλέον, τον κώδικα του server μπορείς να τον βρεις <a href="https://github.com/LeonHTM/TichuStatsServer" class="faq-link">εδώ</a>. Ο κώδικας αυτής της σελίδας βρίσκεται <a href="https://github.com/LeonHTM/tichu.dev" class="faq-link">εδώ</a>.</p>
+              {% else %}
                 <p>TichuStats is open sourced on <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. You can find the code <a href="https://github.com/LeonHTM/TichuStats" class="faq-link">here</a>. Additionally you can find the code for the server <a href="https://github.com/LeonHTM/TichuStatsServer" class="faq-link">here</a>. The code for this page is <a href="https://github.com/LeonHTM/tichu.dev" class="faq-link">here</a>.</p>
+               {% endif %}
               </div>
             </div>
           </div>
@@ -201,7 +312,13 @@
         <li class="accordion-item build-in">
           <h3 class="accordion-title">
             <button class="accordion-button" aria-expanded="false">
+            {% if lang == "de" %}
+              <span>Wie kann ich Feedback geben?</span>
+            {% elif lang == "el" %}
+              <span>Πώς μπορώ να δώσω feedback;</span>
+            {% else %}
               <span>How can I give feedback?</span>
+            {% endif %}
               <span class="accordion-icon">
                 <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -210,7 +327,13 @@
           <div class="accordion-tray">
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
+              {% if lang == "de" %}
+                <p>Schreibe mir eine E-Mail: <a href="mailto:leon@tichu.dev" class="faq-link">leon@tichu.dev</a>, gib TichuStats in den App Stores eine Bewertung oder erstelle eine Pull-Request auf <a href="https://github.com/LeonHTM" class="faq-link">Github</a> machen.</p>
+              {% elif lang == "el" %}
+                <p>Στείλε μου ένα email: <a href="mailto:leon@tichu.dev" class="faq-link">leon@tichu.dev</a> ή αξιολόγησε το TichuStats στο App Store. Επιπλέον, μπορείς να δημιουργήσεις ένα pull request στο <a href="https://github.com/LeonHTM" class="faq-link">Github</a>.</p>
+              {% else %}
                 <p>Write me an email: <a href="mailto:leon@tichu.dev" class="faq-link">leon@tichu.dev</a> or review TichuStats inside the App Store. Additionally you can create a pull request on <a href="https://github.com/LeonHTM" class="faq-link">Github</a>.</p>
+              {% endif %}
               </div>
             </div>
           </div>
@@ -218,7 +341,13 @@
         <li class="accordion-item build-in">
           <h3 class="accordion-title">
             <button class="accordion-button" aria-expanded="false">
+            {% if lang == "de" %}
+              <span>Wie kann ich TichuStats unterstützen?</span>
+            {% elif lang == "el" %}
+              <span>Πώς μπορώ να υποστηρίξω το TichuStats;</span>
+            {% else %}
               <span>How can I support TichuStats?</span>
+             {% endif %}
               <span class="accordion-icon">
                 <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -227,7 +356,13 @@
           <div class="accordion-tray">
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
+              {% if lang == "de" %}
+                 <p>Erstelle eine Pull-Request auf <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. Falls du mich finanziell unterstützen willst (Ich zahle momentan 125 USD pro Jahr für die beiden App Stores plus Serverkosten), kannst du mir<a href="" class="faq-link">einen Kaffee kaufen</a>.</p>
+              {% elif lang == "el" %}
+                 <p>Μπορείς να δημιουργήσεις pull requests στο <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. Αν θέλεις να με στηρίξεις οικονομικά (πληρώνω αυτή τη στιγμή 135 USD τον χρόνο για το App Store, συν το κόστος του server), μπορείς να <a href="" class="faq-link">μου κεράσεις έναν καφέ</a>.</p>
+              {% else %}
                 <p>You can create pull requests on <a href="https://github.com/LeonHTM" class="faq-link">Github</a>. If you want to support me monetarily (I currently have to pay 135 USD a year for the App Store, plus server costs), you can <a href="" class="faq-link">buy me a coffee</a>.</p>
+              {% endif %}
               </div>
             </div>
           </div>
@@ -235,7 +370,13 @@
         <li class="accordion-item build-in">
           <h3 class="accordion-title">
             <button class="accordion-button" aria-expanded="false">
+            {% if lang == "de" %}
+              <span>Wem gehören die Rechte an Tichu?</span>
+            {% elif lang == "el" %}
+              <span>Ποιος κατέχει τα δικαιώματα του Tichu;</span>
+            {% else %}
               <span>Does TichuStats own the rights to Tichu?</span>
+            {% endif %}
               <span class="accordion-icon">
                 <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -244,7 +385,13 @@
           <div class="accordion-tray">
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
+              {% if lang == "de" %}
+                <p>Die Marke Tichu gehört <a href="https://fatamorgana.ch" class="faq-link">Fata Morgana</a>.</p>
+              {% elif lang == "el" %}
+                <p>Το εμπορικό σήμα Tichu και ό,τι σχετίζεται με αυτό ανήκει στη <a href="https://fatamorgana.ch" class="faq-link">Fata Morgana</a>.</p>
+              {% else %}
                 <p>The Tichu brand and everything around it is owned by <a href="https://fatamorgana.ch" class="faq-link">Fata Morgana</a>.</p>
+              {% endif %}
               </div>
             </div>
           </div>
@@ -252,7 +399,13 @@
         <li class="accordion-item build-in">
           <h3 class="accordion-title">
             <button class="accordion-button" aria-expanded="false">
+            {% if lang == "de" %}
+              <span>Trackt Tichu Stats dich oder sammelt die App private Daten?</span>
+            {% elif lang == "el" %}
+              <span>Συλλέγει το TichuStats προσωπικά δεδομένα ή σε παρακολουθεί;</span>
+            {% else %}
               <span>Does TichuStats collect private data or track you?</span>
+            {% endif %}            
               <span class="accordion-icon">
                 <svg viewBox="0 0 17 8.85"><polyline points="15 1.13 8.5 7.72 2 1.13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -261,7 +414,13 @@
           <div class="accordion-tray">
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
-                <p>TichuStats does not collect, store, or track any of your private data. We only retain your email address and the Tichu game data that you choose to enter into the app. For more information, please review our <a href="/privacy" class="faq-link">privacy policy</a>.</p>
+              {% if lang == "de" %}
+                 <p>TichuStats sammelt, speichert oder tracked keine persönlichen Daten. Wir speichern unter Umständen deine E-Mail Adresse und deine Tichu-Daten, welche du in die App einträgst.Für mehr Informationen, bitte schau dir die <a href="/privacy" class="faq-link">Datenschutzrichtlinie</a> an.</p>
+              {% elif lang == "el" %}
+                 <p>Το TichuStats δεν συλλέγει, δεν αποθηκεύει και δεν παρακολουθεί προσωπικά δεδομένα σου. Ενδέχεται να διατηρούμε τη διεύθυνση email σου και τα δεδομένα των παιχνιδιών Tichu που επιλέγεις να καταχωρήσεις στην εφαρμογή. Για περισσότερες πληροφορίες, δες την <a href="/privacy" class="faq-link">πολιτική απορρήτου</a>.</p>
+              {% else %}
+                <p>TichuStats does not collect, store, or track any of your private data. We possibly retain your email address and the Tichu game data that you choose to enter into the app. For more information, please review our <a href="/privacy" class="faq-link">privacy policy</a>.</p>
+              {% endif %}
               </div>
             </div>
           </div>
@@ -270,9 +429,19 @@
     </section>
   </section>
 
+{% if lang == "de" %}
+  <footer class ="footer-black">
+    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Alle Rechte vorbehalten. <a href="/privacy" class="footer-link">Datenschutzrichtlinie</a>
+  </footer>
+{% elif lang == "el" %}
+  <footer class ="footer-black">
+    Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. Με επιφύλαξη παντός δικαιώματος. <a href="/privacy" class="footer-link">Πολιτική απορρήτου</a>
+  </footer>
+{% else %}
   <footer class ="footer-black">
     Copyright &copy; 2026 <a href="https://drakynem.com" class="footer-link">Drakynem</a>. All rights reserved. <a href="/privacy" class="footer-link">Privacy Policy</a>
   </footer>
+{% endif %}
 
 <script>
   // Fade in + slide up when elements enter the viewport

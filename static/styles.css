@@ -1140,3 +1140,52 @@ privacy-policy {
     line-height: 1.55;
   }
 }
+
+/* LANGUAGE SWITCH */
+
+.nav-links {
+  align-items: center;
+}
+
+
+
+.lang-switch {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: var(--font-text);
+  font-size: 14px;
+  letter-spacing: -0.224px;
+  color: #f5f5f7;
+  background: var(--primary) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 8.85'><polyline points='15 1.13 8.5 7.72 2 1.13' fill='none' stroke='%23f5f5f7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat right 10px center / 10px auto;
+  border: 1px solid rgba(245, 245, 247, 0.35);
+  border-radius: 980px;
+  padding: 4px 28px 4px 12px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.lang-switch:hover {
+  background-color: var(--primary-hover);
+}
+
+.lang-switch:focus-visible {
+  border: 1px solid #f5f5f7;
+}
+
+.lang-switch option {
+  color: #1d1d1f;
+  background: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lang-switch option {
+    color: #f5f5f7;
+    background: #1c1c1e;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 12px;
+  }
+}
