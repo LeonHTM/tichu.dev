@@ -73,7 +73,7 @@ def create_app():
         return render_template("404.html", lang=detect_language()), 404
                 
 
-    LANGUAGE_NAMES = {"en": "English", "de": "Deutsch", "el": "Ελληνικά"}
+    LANGUAGE_NAMES = {"en": "🇬🇧 English", "de": "🇩🇪 Deutsch", "el": "🇬🇷 Ελληνικά"}
 
     @app.context_processor
     def inject_language_links():

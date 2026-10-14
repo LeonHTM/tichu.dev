@@ -29,9 +29,7 @@
 }
 
 html,
-body {
-  height: 100%;
-}
+
 
 body {
   font-family: var(--font-text);
@@ -47,6 +45,9 @@ body {
 /* NAV */
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: #91802A;
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
