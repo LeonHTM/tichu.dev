@@ -129,7 +129,7 @@
         <h3 class="tile-name">Score. Play. Edit.</h3>
       {% endif%}
       {% if lang == "de" %}
-        <p class="tile-desc">Tragt zusammen Tichu-Spiele ein. Alle Spieler können Ergebnisse von irgendeinem ihrer Geräte eintragen. Runden können nachträglich bearbeitet oder gelöscht werden, sogar wenn das Spiel gerade geendet hat.</p>
+        <p class="tile-desc">Tragt zusammen Tichu-Spiele ein: Alle Spieler können Ergebnisse auf irgendeinem ihrer Geräte eintragen. Runden können nachträglich bearbeitet oder gelöscht werden, sogar wenn das Spiel gerade geendet hat.</p>
       {% elif lang == "el" %}
         <p class="tile-desc">Κράτα αναλυτικό σκορ των παιχνιδιών σου στο Tichu. Οι παίκτες μπορούν να καταχωρούν σκορ από οποιαδήποτε συσκευή και μπορείς να επεξεργαστείς ή να διαγράψεις γύρους ανά πάσα στιγμή, ακόμα και μετά το τέλος του παιχνιδιού.</p>
       {% else %}
@@ -147,7 +147,7 @@
         <h3 class="tile-name">Discover exciting Statistics.</h3>
       {% endif%}
       {% if lang == "de" %}
-         <p class="tile-desc">Analysiere deine Performance in Tichu Spielen mithilfe von mehr als 12 Statistiken im Zeitverlauf und vergleiche diese mit deinen Freunden.</p>
+         <p class="tile-desc">Analysiere deine Performance in Tichu-Spielen mithilfe von mehr als 12 Statistiken im Zeitverlauf und vergleiche diese mit deinen Freunden.</p>
       {% elif lang == "el" %}
          <p class="tile-desc">Ανάλυσε την απόδοσή σου στο Tichu με περισσότερα από 12 στατιστικά στον χρόνο και σύγκρινέ την με τους φίλους σου.</p>
       {% else %}
@@ -165,7 +165,7 @@
         <h3 class="tile-name">Scroll Through Full History.</h3>
       {% endif%}
       {% if lang == "de" %}
-       <p class="tile-desc">TichuStats speichert alle deine Tichu-Spiele in vollem Detail. Du kannst ganz einfach nachschauen, wer wen gebombt hat oder wieviel Bomben dir über das ganze Spiel um die Ohren geflogen sind.</p>
+       <p class="tile-desc">TichuStats speichert alle deine Tichu-Spiele in vollem Detail. Du kannst ganz einfach nachschauen, wer wann ein Grand-Tichu angesagt hat oder wieviel Bomben dir um die Ohren geflogen sind.</p>
       {% elif lang == "el" %}
        <p class="tile-desc">Το TichuStats κρατά αναλυτικό ιστορικό όλων των παιχνιδιών σου στο Tichu. Μπορείς εύκολα να δεις ποιος έπαιξε βόμβες σε κάθε γύρο ή πόσα Big Tichu απέτρεψες σε ένα μόνο παιχνίδι.</p>
       {% else %}
@@ -237,11 +237,11 @@
         </div>
         <h3 class="devices-item-label">Vision Pro</h3>
       </div>
-      <div class="devices-item build-in" style="transition-delay: 400ms;">
+      <!---<div class="devices-item build-in" style="transition-delay: 400ms;">
         <div class="devices-item-icon-disabled">
           <img src="{{ url_for('static', filename='symbols/globe.png') }}">
         </div>
-        <h3 class="devices-item-label-disabled">Web</h3>
+        <h3 class="devices-item-label-disabled">Web</h3-->
       </div>
     </div>
     
@@ -427,7 +427,7 @@
             <div class="accordion-content">
               <div class="accordion-content-paragraph">
               {% if lang == "de" %}
-                 <p>TichuStats sammelt, speichert oder tracked keine persönlichen Daten. Wir speichern unter Umständen deine E-Mail Adresse und deine Tichu-Daten, welche du in die App einträgst.Für mehr Informationen, bitte schau dir die <a href="/de/privacy" class="faq-link">Datenschutzrichtlinie</a> an.</p>
+                 <p>TichuStats sammelt, speichert oder trackt keine persönlichen Daten. Wir speichern unter Umständen deine E-Mail Adresse und deine Tichu-Daten, welche du in die App einträgst.Für mehr Informationen, bitte schau dir die <a href="/de/privacy" class="faq-link">Datenschutzrichtlinie</a> an.</p>
               {% elif lang == "el" %}
                  <p>Το TichuStats δεν συλλέγει, δεν αποθηκεύει και δεν παρακολουθεί προσωπικά δεδομένα σου. Ενδέχεται να διατηρούμε τη διεύθυνση email σου και τα δεδομένα των παιχνιδιών Tichu που επιλέγεις να καταχωρήσεις στην εφαρμογή. Για περισσότερες πληροφορίες, δες την <a href="/el/privacy" class="faq-link">πολιτική απορρήτου</a>.</p>
               {% else %}
